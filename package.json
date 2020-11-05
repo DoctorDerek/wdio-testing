@@ -4,7 +4,7 @@
   "description": "Automated software testing with WebdriverIO",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio wdio.conf.js"
   },
   "keywords": [
     "Software",
@@ -21,7 +21,13 @@
     "@wdio/spec-reporter": "^6.7.0",
     "@wdio/sync": "^6.7.2",
     "chromedriver": "^86.0.0",
+    "prettier": "^2.1.2",
     "wdio-chromedriver-service": "^6.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1"
+  }
 }
