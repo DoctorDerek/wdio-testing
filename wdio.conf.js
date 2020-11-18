@@ -1,3 +1,9 @@
+// To run tests:
+// npm run test
+// --> In the package.json file, there's no need for npx,
+// though you would on the command line:
+// npx wdio wdio.conf.js
+
 exports.config = {
   //
   // ====================
@@ -16,7 +22,7 @@ exports.config = {
   // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
   // directory is where your package.json resides, so `wdio` will be called from there.
   //
-  specs: ["./tests/**.js"],
+  specs: ["./test/**.js"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
