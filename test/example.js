@@ -1,6 +1,9 @@
 import {
   MEDIUM_PAUSE_IN_MILLISECONDS,
-  LONG_PAUSE_IN_MILLISECONDS,
+  SHORT_PAUSE_IN_MILLISECONDS,
+  MOBILE_DIMENSIONS,
+  TABLET_DIMENSIONS,
+  DESKTOP_DIMENSIONS,
 } from "./CONSTANTS"
 
 // @ts-check
@@ -55,6 +58,24 @@ describe("Test testcafe example", () => {
 
   it("Changes the viewport", () => {
     browser.setWindowSize(800, 600)
-    browser.pause(LONG_PAUSE_IN_MILLISECONDS)
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
+  })
+
+  it("Changes the viewport to mobile", () => {
+    const [width, height] = MOBILE_DIMENSIONS
+    browser.setWindowSize(width, height)
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
+  })
+
+  it("Changes the viewport to tablet", () => {
+    const [width, height] = TABLET_DIMENSIONS
+    browser.setWindowSize(width, height)
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
+  })
+
+  it("Changes the viewport to desktop", () => {
+    const [width, height] = DESKTOP_DIMENSIONS
+    browser.setWindowSize(width, height)
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
   })
 })
