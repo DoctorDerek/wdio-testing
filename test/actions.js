@@ -12,4 +12,16 @@ describe("Browser Actions", async () => {
     input.addValue("Mike")
     browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
   })
+
+  it("Checkboxes and Radio buttons", async () => {
+    const radio = await $("#linux")
+    radio.waitForExist()
+    radio.click()
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
+
+    const checkbox = await $("#remote-testing")
+    checkbox.waitForExist()
+    checkbox.selectByVisibleText("JavaScript API")
+    browser.pause(SHORT_PAUSE_IN_MILLISECONDS)
+  })
 })
